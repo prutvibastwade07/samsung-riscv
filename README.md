@@ -11,7 +11,7 @@ College: Vidyavardhaka College of Engineering
 
 Email ID: pruthvicb7@gmail.com
 
-GitHub Profile: prutvibastwade07
+GitHub Profile: [prutvibastwade07](https://github.com/prutvibastwade07)
 
 ## Task 1: Task is to refer to C based and RISCV based lab videos and execute the task of compiling the C code using gcc and riscv compiler
 
