@@ -77,3 +77,94 @@ riscv64-unknown-elf-objdump -d sum_1ton.o
 4. -Ofast: Focuses on maximizing performance by enabling aggressive optimizations, potentially at the cost of standard compliance.
 
 5. riscv64-unknown-elf-objdump: A tool for disassembling RISC-V binaries to examine the code structure and debug it effectively.
+
+
+## Task 2: Task is to refer to review the provided spike simulation and observing performance under the -Ofast and O1 compiler optimization flagzs
+# RISC-V Instruction Types for the Given Code
+<details>
+<summary><b>Task 2:</b>Task is to refer to C based and RISCV based lab videos and execute the task of compiling the C code using gcc and riscv compiler simulator</summary>
+<br>
+	
+**Debugging with SPIKE: Comparing -O1 and -Ofast Optimizations**
+
+**-O1:** A moderate optimization for balanced performance.
+
+**-Ofast:** A high-speed optimization that prioritizes performance over strict standards
+
+**add.c File**
+![sum code](https://github.com/user-attachments/assets/8989da87-e34d-4330-af71-683b478b9642)
+
+Commands:
+
+riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o sum.o sum.c
+riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o sum.o sum.c
+
+![Debugging O1](https://github.com/user-attachments/assets/905f4204-0931-4323-8e43-253e8a263ad1)
+
+![Debugging Ofast](https://github.com/user-attachments/assets/94d7b72b-af71-44a5-be81-52251a9d8e75)
+
+
+**Running on SPIKE**
+
+Commands:
+
+spike pk sum.o
+
+To open Interactive Debugging
+
+spike -d pk sum.o
+
+Objdump:
+
+riscv64-unknown-elf-objdump -d sum.o
+riscv64-unknown-elf-objdump -d sum.o | less
+```
+![Objdump -O1](https://github.com/user-attachments/assets/057054e4-16f8-42b0-a7cb-d51486dfa856)
+
+![Objdump -Ofast](https://github.com/user-attachments/assets/b7874894-8ed7-42a7-907d-deee09188ec4)
+
+</details>
+</details>
+<details>
+   
+## Task 3: Task is to refer to review the RISC-5 software documentation to undersytand the R,I,S,B,J,U instruction types.
+# RISC-V Instruction Types for the Given Code
+
+## *Instruction Types*
+
+### 1. *R-Type (Register-Register Instructions)*
+   - Typically involves arithmetic and logical operations between registers.
+   - No such instruction appears directly in the given code at the C level, but operations like comparisons (e.g., num <= 0.0) may involve R-type instructions at the assembly level.
+
+### 2. *I-Type (Immediate Instructions)*
+   - Used for instructions with immediate values or memory addressing.
+   - Example in the code: scanf("%lf", &num);
+     - This would translate to an I-type instruction to load the address of num or handle immediate values.
+
+### 3. *S-Type (Store Instructions)*
+   - Used for storing data from a register to memory.
+   - Example: Assigning the value entered by the user into the variable num involves S-type instructions.
+
+### 4. *B-Type (Branch Instructions)*
+   - Used for conditional branching.
+   - Examples:
+     - if (num <= 0.0)
+     - if (num == 0.0)
+     - These conditions are compiled into B-type instructions such as BEQ (branch if equal), BLT (branch if less than), or BGE (branch if greater or equal).
+
+### 5. *J-Type (Jump Instructions)*
+   - Used for unconditional jumps.
+   - Example: The else block in the code could lead to a jump instruction to skip over the if block or jump to the end of the program.
+
+### 6. *U-Type (Upper Immediate Instructions)*
+   - Used for loading upper bits of immediate values.
+   - While not directly visible in the C code, U-type instructions like LUI (load upper immediate) might be used during address calculations or handling larger constants.
+
+### 7. *UJ-Type (Unconditional Jump and Link Instructions)*
+   - Similar to J-type but used for function calls.
+   - Example: The main() function or calls to printf and scanf might involve UJ-type instructions like JAL (jump and link).
+
+---
+This classification provides a detailed mapping of the instruction types based on the given C code.
+
+
