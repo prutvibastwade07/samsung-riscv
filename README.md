@@ -167,6 +167,8 @@ riscv64-unknown-elf-objdump -d sum.o | less
 ---
 This classification provides a detailed mapping of the instruction types based on the given C code.
 
+Task 4: Functional Simulation of RISC-V Core
+
 RV32I Pipelined Processor Implementation
 
 Overview
