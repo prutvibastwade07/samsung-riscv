@@ -167,4 +167,102 @@ riscv64-unknown-elf-objdump -d sum.o | less
 ---
 This classification provides a detailed mapping of the instruction types based on the given C code.
 
+RV32I Pipelined Processor Implementation
+
+Overview
+
+This Verilog module, iiitb_rv32i, implements a simplified pipelined processor based on the RV32I instruction set architecture (ISA). The design consists of five pipeline stages: Instruction Fetch (IF), Instruction Decode (ID), Execution (EX), Memory (MEM), and Write Back (WB). The processor supports arithmetic, logical, memory, and branch instructions.
+
+Module Description
+
+Inputs:
+
+clk: Clock signal
+
+RN: Reset signal
+
+Outputs:
+
+NPC: Next Program Counter value
+
+WB_OUT: Write Back output
+
+Registers & Memories:
+
+REG: Register file (32 registers, 32-bit each)
+
+MEM: Instruction memory (32 locations, 32-bit each)
+
+DM: Data memory (32 locations, 32-bit each)
+
+Pipeline Stages
+
+Instruction Fetch (IF):
+
+Fetches the instruction from memory based on NPC.
+
+Updates NPC for the next cycle.
+
+Instruction Decode (ID):
+
+Decodes the fetched instruction.
+
+Reads values from the register file.
+
+Computes immediate values if needed.
+
+Execution (EX):
+
+Performs ALU operations for arithmetic and logical instructions.
+
+Computes memory addresses for load/store instructions.
+
+Evaluates branch conditions.
+
+Memory Access (MEM):
+
+Reads from or writes to data memory for load/store instructions.
+
+Passes ALU results to the next stage.
+
+Write Back (WB):
+
+Writes results back to the register file.
+
+Updates the output WB_OUT.
+
+Supported Instructions
+
+Arithmetic & Logical (Register & Immediate): ADD, SUB, AND, OR, XOR, SLT, ADDI, SUBI, ANDI, ORI, XORI
+
+Memory Access: LW (Load Word), SW (Store Word)
+
+Branching: BEQ (Branch if Equal), BNE (Branch if Not Equal)
+
+Shift Operations: SLL (Shift Left Logical), SRL (Shift Right Logical)
+
+Control Signals
+
+BR_EN: Branch Enable flag for conditional branches.
+
+EX_MEM_COND: Determines whether a branch should be taken.
+
+Open your terminal and type the following to install iverilog and GTKWave
+
+$   sudo apt get update
+$   sudo apt get install iverilog gtkwave
+
+To clone the repository and download the netlist files for simulation , enter the following commands in your terminal.
+$ git clone https://github.com/vinayrayapati/iiitb_rv32i
+$ cd iiitb_rv32i
+
+To simulate and run the verilog code , enter the following commands in your terminal.
+$ iverilog -o iiitb_rv32i iiitb_rv32i.v iiitb_rv32i_tb.v
+$ ./iiitb_rv32i
+
+To see the output waveform in gtkwave, enter the following commands in your terminal.
+$ gtkwave iiitb_rv32i.vcd
+
+
+
 
