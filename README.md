@@ -266,5 +266,25 @@ To see the output waveform in gtkwave, enter the following commands in your term
 $ gtkwave iiitb_rv32i.vcd
 
 
+Task 5: Documentation and Repository Update :-
+Overview: Object Detector Using Ultrasonic Sensor with CH32V003
+Project Summary:
+This project is designed to detect objects using an HC-SR04 ultrasonic sensor interfaced with a CH32V003 RISC-V microcontroller. When an object is detected within a certain range, an LED indicator lights up to provide a visual alert. The system operates using a 3.3V power supply and is built on a breadboard using jumper wires for easy prototyping.
+
+Applications:
+Obstacle Detection for Robots
+Proximity Sensing in Security Systems
+Smart Parking Systems
+Automatic Door Systems
+
+Hardware Components:
+CH32V003 RISC-V Microcontroller (Processes sensor data)
+HC-SR04 Ultrasonic Sensor (Measures distance)
+LED (Indicates object detection)
+3.3V Power Supply (Powers the circuit)
+Breadboard & Jumper Wires (For easy wiring)
+
+
+
 
 
