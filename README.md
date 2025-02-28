@@ -283,6 +283,69 @@ HC-SR04 Ultrasonic Sensor (Measures distance)
 LED (Indicates object detection)
 3.3V Power Supply (Powers the circuit)
 Breadboard & Jumper Wires (For easy wiring)
+![ADD](https://github.com/user-attachments/assets/efcc1cff-5ec3-45ca-bef5-9353fa06aee9)
+![ADDI](https://github.com/user-attachments/assets/ed842272-29d9-4d59-98f7-6a89f9d84d38)
+![ADDI](https://github.com/user-attachments/assets/c425db9e-54b7-4946-8a10-21e1b83e05cf)
+![AND](https://github.com/user-attachments/assets/867060a3-f2d3-4cc4-9a34-a1cac6abc211)
+![AND](https://github.com/user-attachments/assets/6b1d16ab-b0c6-4e85-b07b-bb616062372d)
+![BEQ](https://github.com/user-attachments/assets/9d882bad-7eed-437f-9554-70767c9d349e)
+![FULL 5 STAGE](https://github.com/user-attachments/assets/7b872074-95e2-4397-bf6d-8f5362369700)
+![LW](https://github.com/user-attachments/assets/20fa0712-863e-40fb-b232-e2007d04b2c1)
+![OR](https://github.com/user-attachments/assets/2e8ab2c2-347a-4b74-bae3-8488f97bbe57)
+
+Task 5:- : Documentation and Repository Update (Deadline: 28th January, 2025)
+• Recording: Task 5 Recording.
+• Update Repository:
+o Add the Project Name and a brief Overview of your application.
+o List Components Required to build your application.
+Project Name:- WaveSense: Ultrasonic Range Finder
+
+Overview: Object Detector Using Ultrasonic Sensor with CH32V003
+Project Summary:
+This project is designed to detect objects using an HC-SR04 ultrasonic sensor interfaced with a CH32V003 RISC-V microcontroller. When an object is detected within a certain range, an LED indicator lights up to provide a visual alert. The system operates using a 3.3V power supply and is built on a breadboard using jumper wires for easy prototyping.
+
+Project Description
+This project implements an object detection system using the HC-SR04 ultrasonic sensor and the CH32V003 RISC-V microcontroller. It measures the distance of objects and triggers an LED when an object is detected within a specified range. The system operates on a 3.3V power supply and is built using a breadboard for easy prototyping.
+
+Working Principle
+The ultrasonic sensor (HC-SR04) emits sound waves from its TRIG pin.
+The waves bounce back when they hit an object and are received by the ECHO pin.
+The CH32V003 microcontroller calculates the distance based on the time delay between transmission and reception.
+If the object is closer than 10 cm, the LED turns ON. Otherwise, it remains OFF.
+
+Table
+![RACHU1](https://github.com/user-attachments/assets/9ec7ed06-1348-4a35-8e3f-174af586335b)
+
+Components Required
+![RACHU3](https://github.com/user-attachments/assets/24143aa3-991c-43fc-87b6-b66f98ff1df4)
+
+![RACHU2](https://github.com/user-attachments/assets/678fd98c-5962-4fa9-a9c5-62e4bdd55356)
+
+Task 6:- : Final Code Submission & Application Demo
+
+
+![breadboard](https://github.com/user-attachments/assets/5ad7cd53-ee42-4cef-adc9-4844867323de)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
