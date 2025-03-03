@@ -167,7 +167,7 @@ riscv64-unknown-elf-objdump -d sum.o | less
 ---
 This classification provides a detailed mapping of the instruction types based on the given C code.
 
-Task 4: Functional Simulation of RISC-V Core
+# Task 4: Functional Simulation of RISC-V Core
 
 RV32I Pipelined Processor Implementation
 
@@ -266,7 +266,7 @@ To see the output waveform in gtkwave, enter the following commands in your term
 $ gtkwave iiitb_rv32i.vcd
 
 
-Task 5: Documentation and Repository Update :-
+# Task 5: Documentation and Repository Update :-
 Overview: Object Detector Using Ultrasonic Sensor with CH32V003
 Project Summary:
 This project is designed to detect objects using an HC-SR04 ultrasonic sensor interfaced with a CH32V003 RISC-V microcontroller. When an object is detected within a certain range, an LED indicator lights up to provide a visual alert. The system operates using a 3.3V power supply and is built on a breadboard using jumper wires for easy prototyping.
@@ -293,7 +293,7 @@ Breadboard & Jumper Wires (For easy wiring)
 ![LW](https://github.com/user-attachments/assets/20fa0712-863e-40fb-b232-e2007d04b2c1)
 ![OR](https://github.com/user-attachments/assets/2e8ab2c2-347a-4b74-bae3-8488f97bbe57)
 
-Task 5:- : Documentation and Repository Update (Deadline: 28th January, 2025)
+# Task 6:- : Documentation and Repository Update (Deadline: 28th January, 2025)
 • Recording: Task 5 Recording.
 • Update Repository:
 o Add the Project Name and a brief Overview of your application.
